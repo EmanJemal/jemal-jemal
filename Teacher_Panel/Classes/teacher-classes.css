@@ -1,0 +1,109 @@
+.home {
+    position: relative;
+    padding-top: 104px;
+}
+.classes{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.class{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    border-color: #6d6d6d;
+    border-width: 2px;
+    border-style: solid;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    transition: box-shadow 500ms ease-in-out;
+    cursor: pointer;
+}
+.class:hover{
+    box-shadow: 2px 2px 10px black;
+}
+.class i{
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    color: #081D45;
+}
+.class .class-name{
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+.class .teacher-name{
+    color: #081D45
+}
+.class .teacher{
+    color: #081D45
+}
+
+/*add-class*/
+.add-class{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-color: #6d6d6d;
+    border-width: 2px;
+    border-style: solid;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    transition: box-shadow 500ms ease-in-out;
+    cursor: pointer;
+}
+.add-class:hover{
+    box-shadow: 2px 2px 20px black;
+}
+.add-class i{
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: #081D45;
+    margin-top: 20px;
+}
+.add-class h1{
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+/*Suggestion*/
+
+.suggestions-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  .suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  .suggestion-item i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+@media(max-width: 864px){
+    .classes{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 538px){
+    .classes{
+        grid-template-columns: 1fr;
+    }
+}

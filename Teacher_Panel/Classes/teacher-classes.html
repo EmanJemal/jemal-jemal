@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Rooms</title>
     <link rel=stylesheet id=google-fonts-1-css href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.6" media=all>
-    <link rel="stylesheet" href="teacher-dashboard.css">
+    <link rel="stylesheet" href="teacher-classes.css">
     <link rel="stylesheet" href="/Styles/Shared/teacher-panel.css">
     <script src=https://kit.fontawesome.com/4838fef60e.js crossorigin=anonymous></script></head>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel=stylesheet id=google-fonts-1-css href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.6" media=all>
     <link rel="stylesheet" href="/Styles/Shared/scrollbar.css">
-</html>
-    <body>
+    <link rel="stylesheet" href="/Styles/Shared/add-class-pop-up.css">
+    </html>
+<body>
 
     <div class="sidebar">
         <div class="logo-details">
@@ -21,7 +22,7 @@
         </div>
           <ul class="nav-links">
             <li>
-              <a href="#" class="active">
+              <a href="/Teacher_Panel/Teacher-Dashboard/teacher-dashboard.html" class="#">
                 <i class='bx bx-grid-alt' ></i>
                 <span class="links_name">Dashboard</span>
               </a>
@@ -33,7 +34,7 @@
               </a>
             </li>
             <li>
-              <a href="/Teacher_Panel/Classes/teacher-classes.html">
+              <a href="#" class="active">
                 <i class="fa-solid fa-chalkboard-user"></i>
                 <span class="links_name">Classes</span>
               </a>
@@ -94,96 +95,37 @@
           </div>
         </nav>
 
-        <div class="dashboard-boxes">
-          <div class="total-students-div boxes">
-            
-            <div class="students-data">
-              <h5>Total Students</h2>
-              <h4>20</h1>
+
+        <div class="home">
+            <div class="classes">
+
+                <div class="add-class">
+                    <i class="fa-solid fa-plus"></i>
+                    <h1>Add Class</h1>
+                </div>
+                
+
             </div>
-
-            <div class="students-icon">
-              <i class="fa-solid fa-user-tie"></i>
-            </div>
-
-          </div>
-
-          <div class="avg-performance-div boxes">
-            
-            <div class="students-data">
-              <h5>Avg. Performance</h2>
-              <h4>80%</h1>
-            </div>
-
-            <div class="students-icon">
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-
-          </div>
-
-          <div class="total-class-div boxes">
-            
-            <div class="students-data">
-              <h5>Total Class</h2>
-              <h4>2</h1>
-            </div>
-
-            <div class="students-icon">
-              <i class="fa-solid fa-chalkboard-user"></i>
-            </div>
-
-          </div>
-          
-
-          <div class="Avg-Mark-div"></div>
-          <div class="total-classes-div"></div>
 
         </div>
 
-        <div class="sales-boxes">
-          <div class="recent-sales box">
-            <div class="title">Top Students</div>
-            <div class="sales-details">
-              <ul class="details">
-                <li class="topic">First Name</li>
-                <li>Arafat</li>
-                <li>Bona</li>
-                <li>Noel</li>
-                <li>Basleal</li>
-              </ul>
 
-              <ul class="details">
-                <li class="topic">Middle Name</li>
-                <li>Mohammed</li>
-                <li>Social</li>
-                <li>Fasil</li>
-                <li>Fasil</li>
-              </ul>
-              <ul class="details num">
-                <li class="topic">Avgerage</li>
-                <li>98%</li>
-                <li>96%</li>
-                <li>90%</li>
-                <li>89%</li>
-              </ul>
-              <ul class="details num total-marks">
-                <li class="topic">Total Marks / 150</li>
-                <li>147</li>
-                <li>144</li>
-                <li>140</li>
-                <li>138</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
         
     </section>
 
 
+    <div class="container-alert">
+      <input type="checkbox" id="check">
+      <div class="background"></div>
+
+
+    </div>
+
   
 
 
-    <script type="module" src="teacher-dashboard.js"></script>
+    <script type="module" src="teacher-classes.js"></script>
     <script type="module" src="/Scripts/Shared/teacher-shared.js"></script>
   </body>
 </html>

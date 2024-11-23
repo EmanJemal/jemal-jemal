@@ -168,7 +168,7 @@
     margin-bottom: 15px;
     margin-left: 10px;
 }
-i{
+.container i, header i{
     color: #4CC9FE;
     font-size: 20px;
     margin-left: 10px;
