@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penta Class</title>
+    <style>
+                /* Parent container should be a flex container */
+        .parent-container {
+            display: flex;               /* Use Flexbox */
+            justify-content: center;     /* Center horizontally */
+            align-items: center;         /* Center vertically */
+            width: 100vw;                /* Full viewport width */
+            height: 100vh;               /* Full viewport height */
+            position: relative;
+        }
+
+        .full-width {
+            width: 80%;                  /* Adjust width to your preference */
+            height: auto;                /* Maintain aspect ratio */
+            max-width: 100%;             /* Prevent overflowing */
+            display: block;              /* Ensures proper behavior */
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <div class="parent-container">
+    <dotlottie-player class="full-width"src="https://lottie.host/ca4215fb-31aa-471f-9708-ae245d4f4dc4/Bu346LATDK.json" background="transparent" speed="1"loop autoplay></dotlottie-player>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

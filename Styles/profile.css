@@ -1,0 +1,80 @@
+h1, h3, h2, i{
+    color: white;
+}
+.container .profile{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin-left: 50px;
+}
+.container .profile i{
+    font-size: 150px;
+    margin-top: 40px;
+}
+.container .profile h1{
+    margin-top: 50px;
+    font-size: 50px;
+}
+.student{
+    color: rgb(226, 226, 226);
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 300px;
+}
+.profile{
+    padding: 20px;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+    transition: box-shadow 500ms ease-in-out;
+    cursor: pointer;
+  }
+.profile:hover{
+    box-shadow: 3px 3px 20px black;
+}
+@media(max-width: 866px) {
+    .container .profile h1{
+        font-size: 30px;
+    }
+    .container .profile h3{
+        font-size: 20px;
+    }
+}
+@media(max-width: 774px) {
+    .container .profile i{
+        font-size: 100px;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+}
+@media(max-width: 620px) { 
+    .container .profile{
+        grid-template-columns:  1fr;
+    }   
+    .container .profile i{
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .container .profile h1{
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+    .container .profile h3{
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+}
+@media (max-width: 530px) {
+    .profile{
+        margin-top: 30px;
+    }
+}
+@media(max-width: 420px) {
+    .profile{
+        width: 80%;
+    }
+}

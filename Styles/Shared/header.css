@@ -1,0 +1,121 @@
+/*General*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Poppin;
+}
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #343f4f;
+}
+li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/*Header*/
+.logo{
+  width: 100px;
+  height: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+header{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.links{
+  padding-top: 40px;
+}
+.links a {
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 50px;
+  cursor: pointer;
+  position: relative; /* To position the pseudo-element */
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent; /* Transparent border to maintain the layout */
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #4CC9FE;
+  transition: width 0.3s ease; /* Adjust the duration as needed */
+}
+
+.links a:hover::after {
+  width: 100%; /* Expands the line from left to right */
+}
+.links a:hover{
+  color: #4CC9FE;
+}
+.links a i{
+  font-size: 30px;
+}
+@media (max-width: 700px) {
+  .svg-logo{
+    width: 200px;
+    margin-left: -50px;
+  }
+  header{
+    grid-template-columns: 200px 8fr;
+    width: 100%;
+  }
+}
+@media (max-width: 636px) {
+  .links a{
+    margin-left: 0;
+    margin-right: 35px;
+  }
+}
+@media (max-width: 518px) {
+  header{
+    grid-template-columns: 1fr;
+  }
+  .links{
+    padding-top: 0;
+    margin-left: 20px;
+  }
+  .logo{
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+  .svg-logo{
+    width: 300px;
+    margin-left: -50px;
+  }
+  .links a{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 452px) {
+  .links a{
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 414px) {
+  .links a{
+    margin-left: 10px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 364px) {
+  .links a i{
+    font-size: 25px;
+  }
+}
