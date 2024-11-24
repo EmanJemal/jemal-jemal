@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Rooms</title>
     <link rel=stylesheet id=google-fonts-1-css href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.6" media=all>
-    <link rel="stylesheet" href="teacher-classes.css">
+    <link rel="stylesheet" href="announcement.css">
     <link rel="stylesheet" href="/Styles/Shared/teacher-panel.css">
     <script src=https://kit.fontawesome.com/4838fef60e.js crossorigin=anonymous></script></head>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel=stylesheet id=google-fonts-1-css href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.6" media=all>
     <link rel="stylesheet" href="/Styles/Shared/scrollbar.css">
-    <link rel="stylesheet" href="/Styles/Shared/add-class-pop-up.css">
     </html>
 <body>
 
@@ -34,13 +33,13 @@
               </a>
             </li>
             <li>
-              <a href="#" class="active">
+              <a href="/Teacher_Panel/Classes/teacher-classes.html" class="#">
                 <i class="fa-solid fa-chalkboard-user"></i>
                 <span class="links_name">Classes</span>
               </a>
             </li>
             <li>
-              <a href="/Teacher_Panel/Announcement/announcement.html">
+              <a href="#" class="active">
                 <i class="fa-solid fa-bullhorn"></i>
                 <span class="links_name">Announcement</span>
               </a>
@@ -104,16 +103,90 @@
         </nav>
 
 
-        <div class="home">
-            <div class="classes">
 
-                <div class="add-class">
-                    <i class="fa-solid fa-plus"></i>
-                    <h1>Add Class</h1>
-                </div>
+        <div class="home">
+          <!--Form-->
+          <div class="add-announcement">
+            <form class="add-form" id="input-container">
+              <input type="text" class="Learning-Tasks input" placeholder="Home Work or Assignments" required>
+              <input type="text" class="Title input" placeholder="Title" required>
+              <input type="datetime-local" class="date input">
+             
+              <input type="radio" id="upload" class="upload input" name="upload" value="ask for upload">
+              <label for="upload">Ask For Upload</label>
+              
+              <input type="radio" id="dont-upload" class="upload input" name="upload" value="don't ask for upload">
+              <label for="dont-upload">Don't Ask For Upload</label>
+              <div></div>
+              <input type="radio" id="late-submisson" class="late-submisson input" name="late-submisson" value="accept late submission">
+              <label for="late-submisson">Accept Late Submission</label>
+              
+              <input type="radio" id="dont-late-submisson" class="late-submisson input" name="late-submisson" value="don't accept late submission">
+              <label for="dont-late-submisson">Don't Accept</label>
+
+              <input type="text" class="alert-msg input" placeholder="Alert Messages">          
+              <input type="text" class="points input" placeholder="Point">          
+          
+              <input type="submit" class="submit-btn" value="Submit">
+            </form>
+
+          <!--Preview-->
+            <div class="see-preview">
+              <h3 class="title-h3">(Learning-Tasks)</h3>
+              <h3 class="homework-title">Do Exercise <strong style="color: #4CC9FE;">18B</strong> for monday!</h3>
+             
+              <li>
+                <ul><i class="fa-solid fa-check"></i> Points</ul>
+                <ul><i class="fa-solid fa-check"></i> Points</ul>
+                <ul><i class="fa-solid fa-check"></i> Points</ul>
+                <ul><i class="fa-solid fa-check"></i> Points</ul>
+              </li>
+
+            <section class="container-alert">
+              <div class="time-content">
+              <div class="time days">
+                <span class="number"></span>
+                <span class="text">days</span>
+              </div>
+              <div class="time hours">
+                <span class="number"></span>
+                <span class="text">hours</span>
+              </div>
+              <div class="time minutes">
+                <span class="number"></span>
+                <span class="text">minutes</span>
+              </div>
+              <div class="time seconds">
+                <span class="number"></span>
+                <span class="text">seconds</span>
+              </div>
+            </div>
+            </section>
+
+            <div class="homework-upload">
+
+              <div class="wrapper">
                 
+                <!-- Move uploaded-area section above the form -->
+                <section class="uploaded-area"></section>
+                <h1 class="upload-h1">Upload HomeWork</h1>
+    
+                <form action="#">
+                  <input class="file-input" type="file" name="file" hidden multiple webkitdirectory disabled>
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <p>Browse File to Upload</p>
+                </form>
+              
+                <section class="progress-area"></section>
+              </div>
+              
+            </div>
 
             </div>
+
+          </div>
+
+
 
         </div>
 
@@ -123,17 +196,11 @@
     </section>
 
 
-    <div class="container-alert">
-      <input type="checkbox" id="check">
-      <div class="background"></div>
-
-
-    </div>
-
   
 
+    <script type="module" src="/Scripts/eachClassRoom.js"></script>
     <script type="module" src="/Scripts/Shared/teacher-panel.js"></script>
-    <script type="module" src="teacher-classes.js"></script>
+    <script type="module" src="announcement.js"></script>
     <script type="module" src="/Scripts/Shared/teacher-shared.js"></script>
   </body>
 </html>

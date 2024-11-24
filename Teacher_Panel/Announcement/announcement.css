@@ -1,0 +1,274 @@
+.home {
+  position: relative;
+  padding-top: 104px;
+}
+.home{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.input {
+  padding: 10px 15px;
+  font-size: 16px; 
+  font-weight: bold; 
+  margin-left: 15px; 
+  border-radius: 8px; 
+  border: 2px solid #4caf50; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;
+  display: block;
+  margin-top: 30px;
+}
+input[type="text"]{
+  width: 350px;
+}
+.input:focus {
+  border-color: #008cba;
+  box-shadow: 0 0 8px rgba(1, 41, 1, 0.8); 
+  outline: none;
+}
+
+.input:hover {
+  background-color: #f7f7f7; 
+  cursor: pointer;
+}
+.add-announcement{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.see-preview{
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  
+  margin-right: 20px;
+  background-color: #343f4f;
+  color: white;
+  padding: 30px;
+
+  height: fit-content;
+}
+.title-h3{
+  color: #FFA500;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.see-preview li {
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+/*alert-mssg*/
+.container-alert .time-content {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+.time-content .time {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #5053577a;
+  margin-top: 30px;
+}
+.time .number,
+.time .text {
+  font-weight: 500;
+  color: #fff;
+}
+.time .number {
+  font-size: 40px;
+}
+.time .text {
+  text-transform: capitalize;
+  font-size: 12px;
+}
+.email-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+}
+.email-content p {
+  font-size: 13px;
+}
+.upload {
+  margin-right: 10px; 
+  display: inline-block;
+}
+.late-submisson{
+  margin-right: 10px; 
+  display: inline-block;
+}
+
+
+/*Home Work Detail*/
+.homework-upload{
+  margin-top: 70px;
+  display: none;
+}
+.homework-detail-it{
+    color: white;
+}
+.homework-detail-it{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+
+    margin-top: 20px;
+    margin-left: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.homework-detail-it li{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.container i, header i{
+    color: #4CC9FE;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+/*upload*/
+
+::selection{
+  color: #404040;
+  background: #4CC9FE;
+}
+.wrapper{
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+  margin-top: -40px;
+}
+.wrapper h1{
+  color: #4CC9FE;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper form{
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #4CC9FE;
+}
+form :where(i, p){
+  color: #4CC9FE;
+}
+form i{
+  font-size: 50px;
+}
+form p{
+  margin-top: 15px;
+  font-size: 16px;
+}
+section .row{
+  margin-bottom: 10px;
+  background: #E9F0FF;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -20px;
+}
+section .row i{
+  color: #4CC9FE;
+  font-size: 30px;
+}
+section .details span{
+  font-size: 14px;
+}
+.progress-area .row .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%;
+  background: #4CC9FE;
+  border-radius: inherit;
+}
+.uploaded-area{
+  max-height: 232px;
+  overflow-y: scroll;
+}
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar{
+  width: 0px;
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size{
+  color: white;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
+
+
+
+/*submit-btn*/
+.submit-btn {
+  background-color: #4CC9FE; 
+  color: white;
+  padding: 14px 25px;
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  margin-top: 30px;
+  margin-left: 100px;
+
+  font-size: 20px; 
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #2a82a8; 
+}
+
+.submit-btn:active {
+  background-color: rgb(0, 109, 156);
+}

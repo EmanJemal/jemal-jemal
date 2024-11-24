@@ -37,7 +37,8 @@ rooms.forEach((room) => {
 
         <div class="btns">
           <label for="check">Create</label>
-        </div>
+          <label for="check">Close</label>
+          </div>
 
       </div>`;
 

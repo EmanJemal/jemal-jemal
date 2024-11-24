@@ -150,7 +150,7 @@ body, html {
     transition: all 0.4 ease;
   }
   .home-section nav .profile-details{
-    display: flex;
+    display: inl;
     align-items: center;
     background: #F5F6FA;
     border: 2px solid #EFEEF1;
@@ -182,6 +182,72 @@ body, html {
   }
 
 
+
+  .profile-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .profile-details {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+
+  .profile-details:hover {
+    background-color: #f0f0f0;
+  }
+
+  .profile-details i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .profile-details .admin_name {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    width: 20%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+  }
+
+  .dropdown-menu.active {
+    display: flex;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+
+  .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+  
 /* Responsive Media Query */
 @media (max-width: 1240px) {
     .sidebar{

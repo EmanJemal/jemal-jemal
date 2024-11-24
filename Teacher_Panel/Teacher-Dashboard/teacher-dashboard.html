@@ -39,7 +39,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/Teacher_Panel/Announcement/announcement.html">
                 <i class="fa-solid fa-bullhorn"></i>
                 <span class="links_name">Announcement</span>
               </a>
@@ -87,11 +87,18 @@
             <input type="text" placeholder="Search...">
             <i class='bx bx-search' ></i>
           </div>
-          <div class="profile-details">
+
+          <div class="profile-details" id="profileDetails">
             <i class="fa-solid fa-user"></i>
             <span class="admin_name">Mr. Berakat</span>
-            <i class='bx bx-chevron-down' ></i>
+            <i class="fa-solid fa-chevron-down"></i>
           </div>
+
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#settings"><i class="fa-solid fa-gear"> </i> Settings</a>
+            <a href="#logout"><i class="fa-solid fa-door-open"> </i> Logout</a>
+          </div>
+
         </nav>
 
         <div class="dashboard-boxes">
@@ -182,7 +189,7 @@
 
   
 
-
+    <script type="module" src="/Scripts/Shared/teacher-panel.js"></script>
     <script type="module" src="teacher-dashboard.js"></script>
     <script type="module" src="/Scripts/Shared/teacher-shared.js"></script>
   </body>
