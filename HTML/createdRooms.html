@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/Styles/createdRooms.css">
     <script src=https://kit.fontawesome.com/4838fef60e.js crossorigin=anonymous></script>
     <link rel="stylesheet" href="/Styles/Shared/scrollbar.css">
+    <link rel="stylesheet" href="/Styles/Shared/alert-box.css">
   </head>
 <body>
 
@@ -78,13 +79,73 @@
   </header>
 
 
-  <div class="classrooms">
+  <div class="classrooms" id="classroom" >
+    <div class="classroom classroom-loading">
+      
+      <div class="full-classroom-detail">
+        <i class="circle-loading"></i>
+        <div class="classroom-detail-loading">
+          <h1></h1>
+          <p></p>
+          <p class="security-code"></p>
+        </div>
+      </div>
+
+      <a class="plus-button-a"><i class="fa-solid fa-plus"></i></a>
+
+    </div>
+    <div class="classroom classroom-loading">
+      
+      <div class="full-classroom-detail">
+        <i class="circle-loading"></i>
+        <div class="classroom-detail-loading">
+          <h1></h1>
+          <p></p>w
+          <p class="security-code"></p>
+        </div>
+      </div>
+
+      <a class="plus-button-a"><i class="fa-solid fa-plus"></i></a>
+
+    </div>
+    <div class="classroom classroom-loading">
+      
+      <div class="full-classroom-detail">
+        <i class="circle-loading"></i>
+        <div class="classroom-detail-loading">
+          <h1></h1>
+          <p></p>
+          <p class="security-code"></p>
+        </div>
+      </div>
+
+      <a class="plus-button-a"><i class="fa-solid fa-plus"></i></a>
+
+    </div>
   </div>
 
 
   <div id="toastBox">
 
   </div>
+
+
+  <div class="container-alert">
+    <input type="checkbox" id="check">
+    <div class="background"></div>
+
+    <div class="alert_box">
+      <div class="icon" style="border-color: rgb(1, 255, 1);">
+        <i class="fas fa-plus" style="color:  rgb(1, 255, 1);"></i>
+      </div>
+      <p class="text">Add It To My List</p>
+      <div class="btns">
+        <label class="join-button" style="background-color:  #4CC9FE;">Ok</label>
+        <label for="check" style="background-color:  #ff3425;">Cancle</label>
+      </div>
+    </div>
+  </div>
+
 
 
     <script type="module" src="/Scripts/Shared/header.js"></script>

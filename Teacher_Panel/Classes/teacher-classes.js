@@ -1,4 +1,6 @@
 import { rooms } from "../../Scripts/Data/rooms.js";
+import { database, ref, set, get, update, remove, onValue, child, push, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from '../../Scripts/firebase.js';
+
 
 rooms.forEach((room) => {
     document.querySelector('.classes').innerHTML += `
@@ -31,12 +33,12 @@ rooms.forEach((room) => {
         <div class="input-fields">
           <input class="icon-name" type="text" placeholder="Icon Name" required >
           <div class="suggestions-list" id="icon-suggestions"></div>
-          <input class="class-name" type="text" placeholder="Class Name" required>
+          <input class="class-name name-of-class" type="text" placeholder="Class Name" required>
         </div>
 
 
         <div class="btns">
-          <label for="check">Create</label>
+          <label class="create-button">Create</label>
           <label for="check">Close</label>
           </div>
 
@@ -112,3 +114,41 @@ inputField.addEventListener("input", () => {
 
 // Initial fetch of free icons
 fetchFreeIcons();
+
+
+
+
+
+
+
+/* Creating Room */
+
+const button = document.querySelector('.alert_box .create-button');
+
+// Listen for form submission
+button.addEventListener('click', () => {
+
+    const iconName = document.querySelector('.icon-name').value;
+    const className = document.querySelector('.name-of-class').value;
+
+
+
+	const userData = {
+		Icon: iconName,
+		ClassName: className,
+		status: 'underReview'
+	};
+
+
+  console.log(userData);
+
+	const classKey = className;
+
+	const userRef = ref(database, `Approved_Classes/${classKey}`)/** Just for now untill the admin panel is built */
+
+	set(userRef, userData)
+		.then (()=>{
+            window.location.reload();
+        });
+
+});

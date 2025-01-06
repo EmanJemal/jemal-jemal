@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Rooms</title>
     <link rel=stylesheet id=google-fonts-1-css href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.6" media=all>
-    <link rel="stylesheet" href="teacher-classes.css">
+    <link rel="stylesheet" href="resources.css">
     <link rel="stylesheet" href="/Styles/Shared/teacher-panel.css">
     <script src=https://kit.fontawesome.com/4838fef60e.js crossorigin=anonymous></script></head>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel=stylesheet id=google-fonts-1-css href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.6" media=all>
     <link rel="stylesheet" href="/Styles/Shared/scrollbar.css">
     <link rel="stylesheet" href="/Styles/Shared/add-class-pop-up.css">
-    </html>
+    <meta property="og:title" content="Video Title">
+    <meta property="og:description" content="Video Description">
+    <meta property="og:image" content="https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg">    
+</html>
 <body>
 
     <div class="sidebar">
@@ -36,7 +39,7 @@
             </a>
           </li>
           <li>
-            <a href="/Teacher_Panel/Classes/teacher-classes.html" class="active">
+            <a href="/Teacher_Panel/Classes/teacher-classes.html" class="">
               <i class="fa-solid fa-chalkboard-user"></i>
               <div class="notification-Classes"></div>
               <span class="links_name">Classes</span>
@@ -78,7 +81,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="active">
               <i class="fa-solid fa-book"></i>
               <div class="notification-Resources"></div>
               <span class="links_name">Resources</span>
@@ -88,7 +91,7 @@
     </div>
 
 
-      <section class="home-section">
+    <section class="home-section">
         <nav>
           <div class="sidebar-button">
             <i class='bx bx-menu sidebarBtn'></i>
@@ -115,16 +118,7 @@
 
 
         <div class="home">
-            <div class="classes">
-
-                <div class="add-class">
-                    <i class="fa-solid fa-plus"></i>
-                    <h1>Add Class</h1>
-                </div>
-                
-
-            </div>
-
+            
         </div>
 
 
@@ -133,17 +127,10 @@
     </section>
 
 
-    <div class="container-alert">
-      <input type="checkbox" id="check">
-      <div class="background"></div>
-
-
-    </div>
-
   
 
     <script type="module" src="/Scripts/Shared/teacher-panel.js"></script>
-    <script type="module" src="teacher-classes.js"></script>
+    <script type="module" src="resources.js"></script>
     <script type="module" src="/Scripts/Shared/teacher-shared.js"></script>
   </body>
 </html>

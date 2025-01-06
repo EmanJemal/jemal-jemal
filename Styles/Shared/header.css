@@ -28,7 +28,7 @@ a{
 }
 header{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .links{
   padding-top: 40px;
@@ -62,6 +62,25 @@ header{
 }
 .links a i{
   font-size: 30px;
+}
+.button-premium{
+  position: relative;
+}
+.button-premium button{
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  background-color: #343f4f;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.button-premium button:hover{
+  color: #4CC9FE;
 }
 @media (max-width: 700px) {
   .svg-logo{

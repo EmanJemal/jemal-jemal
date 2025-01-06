@@ -112,7 +112,6 @@ input[type="text"]{
 /*Home Work Detail*/
 .homework-upload{
   margin-top: 70px;
-  display: none;
 }
 .homework-detail-it{
     color: white;
@@ -271,4 +270,39 @@ section .details span{
 
 .submit-btn:active {
   background-color: rgb(0, 109, 156);
+}
+@media(max-width: 707px){
+  .add-announcement{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  input[type="text"]{
+    width: 80%;
+  }
+  .submit-btn{
+    margin-bottom: 30px;
+  }
+  .see-preview{
+    width: 80%;
+    margin-left: 70px;
+  }
+}
+@media(max-width: 591px){
+  .see-preview{
+    margin-left: 10px;
+    width: 90%;
+  }
+  .time{
+    padding: 5px;
+    width: 60px;
+  }
+  label{
+    font-size: 13px;
+  }
+}
+@media(max-width: 505px){
+  .time-content{
+    flex-direction: column;
+  }
+
 }

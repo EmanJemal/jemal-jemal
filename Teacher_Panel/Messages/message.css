@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling for general website */
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.home {
+    position: relative;
+    padding-top: 104px;
+  }
+.message{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.message .student-list, .message .message-list{
+    height: 200vh;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 1px;
+    padding: 20px;
+    position: relative;
+}
+.message-list{
+    width: 99%;
+    margin-left: 5px;
+}
+.student-list{
+    width: 95%;
+    margin-left: 10px;
+}
+
+/*Search bar for the student list*/
+.search-for-u-user{
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 90%;
+    color: black;
+    border-style: solid;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.hameburger-menu-close{
+  display: none;
+}
+.hameburger-menu-open{
+  display: inline-block;
+}
+.grade{
+    cursor: pointer;
+    transition: scale ease-in-out 20ms;
+}
+.grade:hover{
+    scale: 1.1;
+}
+
+/*Student List order*/
+.student-list-order{
+    display: grid;
+    grid-template-rows: repeat(10, 30%);
+}
+.student-list-order .student{
+    border-width: 1px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color ease-in-out 100ms;
+    transition: color ease-in-out 100ms;
+    cursor: pointer;
+}
+.student h4, .student p{
+    display: inline-block;
+    margin-left: 10px;
+}
+.student-list-order .student:hover{
+    background-color: rgb(63, 63, 63);
+    color: rgb(243, 243, 243);
+}
+.active-student{
+    background-color: rgb(63, 63, 63);
+    color: rgb(243, 243, 243);
+}
+
+/*message list*/
+.message-list{
+    display: grid;
+    grid-template-rows: 20% 60% 40%;
+}
+.message-list h1, .message-list .class {
+    display: inline-block;
+}
+.message-list .last-seen{
+    font-weight: 806;
+    margin-left: 30px;
+}

@@ -1,149 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard - Announcement History</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Active Tab Hover Animation | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src=https://kit.fontawesome.com/4838fef60e.js crossorigin=anonymous></script>
 
-      body {
-          font-family: Arial, sans-serif;
-          background-color: #f4f7fa;
-          padding: 20px;
-      }
-
-      .container {
-          max-width: 1200px;
-          margin: 0 auto;
-      }
-
-      header {
-          text-align: center;
-          margin-bottom: 30px;
-      }
-
-      h1 {
-          font-size: 2rem;
-          color: #333;
-      }
-
-      .search-bar {
-          width: 80%;
-          padding: 10px;
-          font-size: 1rem;
-          margin-top: 10px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-          outline: none;
-      }
-
-      .search-bar:focus {
-          border-color: #4a90e2;
-      }
-
-      .announcement-list {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-      }
-
-      .announcement-card {
-          background-color: #fff;
-          border-radius: 8px;
-          padding: 20px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .announcement-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .announcement-title {
-          font-size: 1.5rem;
-          color: #333;
-      }
-
-      .announcement-date {
-          font-size: 0.9rem;
-          color: #777;
-          margin-top: 10px;
-      }
-
-      .announcement-preview {
-          font-size: 1rem;
-          color: #555;
-          margin-top: 10px;
-      }
-
-      .announcement-actions {
-          margin-top: 20px;
-          display: flex;
-          gap: 10px;
-      }
-
-      .announcement-actions button {
-          padding: 8px 15px;
-          font-size: 1rem;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-      }
-
-      .announcement-actions button:hover {
-          background-color: #f1f1f1;
-      }
-
-      .announcement-actions button:nth-child(1) {
-          background-color: #4CAF50;
-          color: white;
-      }
-
-      .announcement-actions button:nth-child(2) {
-          background-color: #FF6347;
-          color: white;
-      }
-
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #f2f2f2;
+}
+.container{
+  height: 80px;
+  width: 50vw;
+  line-height: 80px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.container .menu{
+  display: flex;
+  position: relative;
+}
+.container .menu li{
+  list-style: none;
+  flex: 1;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+.container .menu li a{
+  color: #1d1f20;
+  transition: color 0.3s ease;
+}
+.container .menu li:hover a{
+  color: #f23b26;
+}
+.container .menu li:first-child a{
+  color: #f23b26;
+}
+.container .menu .line{
+  position: absolute;
+  height: 5px;
+  width: 20%;
+  background: #f23b26;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+.container .menu li:nth-child(2):hover ~ .line{
+  left: 20%;
+}
+.container .menu li:nth-child(3):hover ~ .line{
+  left: 40%;
+}
+.container .menu li:nth-child(4):hover ~ .line{
+  left: 60%;
+}
+.container .menu li:nth-child(5):hover ~ .line{
+  left: 80%;
+}
     </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Teacher Dashboard - Announcement History</h1>
-            <input type="text" id="search" placeholder="Search Announcements..." class="search-bar">
-        </header>
-        
-        <div class="announcement-list">
-            <div class="announcement-card">
-                <h2 class="announcement-title">Math Class Announcement</h2>
-                <p class="announcement-date">Posted on: 2024-11-21</p>
-                <p class="announcement-preview">Reminder: Your math assignment is due by the end of the week...</p>
-                <div class="announcement-actions">
-                    <button>Edit</button>
-                    <button>Delete</button>
-                </div>
-            </div>
-            
-            <div class="announcement-card">
-                <h2 class="announcement-title">Science Class Reminder</h2>
-                <p class="announcement-date">Posted on: 2024-11-20</p>
-                <p class="announcement-preview">Please review the chapters before tomorrow's quiz...</p>
-                <div class="announcement-actions">
-                    <button>Edit</button>
-                    <button>Delete</button>
-                </div>
-            </div>
-            
-            <!-- Add more announcement cards as needed -->
-        </div>
-    </div>
-</body>
+    </head>
+   <body>
+      <div class="container">
+         <div class="menu">
+            <li><a href="#"><span class="fas fa-home"></span></a></li>
+            <li><a href="#"><span class="far fa-comment"></span></a></li>
+            <li><a href="#"><span class="far fa-envelope"></span></a></li>
+            <li><a href="#"><span class="far fa-heart"></span></a></li>
+            <li><a href="#"><span class="far fa-user"></span></a></li>
+            <div class="line"></div>
+         </div>
+      </div>
+   </body>
 </html>
