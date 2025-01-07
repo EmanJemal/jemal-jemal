@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   }
 
                   // Optional: Provide visual confirmation or reload
-                  // window.location.reload();
+                  window.location.reload();
                 } catch (error) {
                   console.error('Error updating database:', error);
                 }

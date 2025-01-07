@@ -32,14 +32,15 @@ form.addEventListener('submit', (event) => {
     const nameOfUser = document.querySelector('.name-user').value;
     const emailOfUser = document.querySelector('.email-user').value;
     const passOfUser = document.querySelector('.pass-user').value;
-
+	const randomFourDigit = Math.floor(1000 + Math.random() * 9000);
 
 
 	const userData = {
 		name: nameOfUser,
 		email: emailOfUser,
 		password: passOfUser,
-		status: 'underReview'
+		status: 'underReview',
+		securityCode: randomFourDigit
 	};
 
 	const studentRef = ref(database, 'users');
