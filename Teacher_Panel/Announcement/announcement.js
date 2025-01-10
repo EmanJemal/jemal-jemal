@@ -145,12 +145,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const classData = snapshot.val();
-/*
+
       if (classData.TeacherName !== teacherName) {
         alert(`You are not authorized to add tasks to the ${selectedClass} class.`);
         return;
       }
-*/
+
       const UploadclassRef = ref(database, `Approved_Classes/${selectedClass}/tasks`);
 
       await push(UploadclassRef, {
