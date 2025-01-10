@@ -7,6 +7,7 @@ import {
     getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile
 } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
 
+
 // Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBbltFGxtaexx5j8zKZkHa-d0F7XAvAIfM",

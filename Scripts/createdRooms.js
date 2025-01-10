@@ -26,8 +26,8 @@ get(approvedRoomsRef)
               <i class="fa-solid fa-${rooms[room].Icon}"></i>
               <div class="classroom-detail">
                 <h1>${rooms[room].ClassName}</h1>
-                <p>By Mr.<strong>Changable</strong></p>
-                <p class="security-code">Changable</p>
+                <p>By Mr.<strong>${rooms[room].TeacherName || 'Not assigned'}</strong></p>
+                <p class="security-code"></p>
               </div>
             </div>
       
@@ -148,14 +148,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     await update(ref(database, `users/${userIdToUpdate}`), {
                       classes: userClasses
                     });
-                    console.log('Class added to user profile successfully!');
+                     console.log('Class added to user profile successfully!');
                   } else {
                     console.warn('Class already exists in user profile.');
                   }
 
                   // Optional: Provide visual confirmation or reload
-                  window.location.reload();
-                } catch (error) {
+                  showToastClassApproved();
+                  setTimeout(()=>{window.location.href = "../HTML/classrooms.html";}, 6000)                              } catch (error) {
                   console.error('Error updating database:', error);
                 }
               } else {
@@ -176,3 +176,20 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('The classroom element was not found in the DOM.');
   }
 });
+
+
+
+
+
+function showToastClassApproved() {
+
+  let toast = document.createElement('div');
+  toast.classList.add('toast');
+  toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> Mr. is reviewing your class and may take up to 24 hours. Please check your email.`;
+  toast.innerHTML += ''
+  toastBox.appendChild(toast);
+
+  setTimeout(()=>{
+    toast.remove();
+  }, 6000)
+};

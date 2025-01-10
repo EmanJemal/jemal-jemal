@@ -1,17 +1,37 @@
 import { rooms } from "../../Scripts/Data/rooms.js";
 import { database, ref, set, get, update, remove, onValue, child, push, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from '../../Scripts/firebase.js';
 
+const classesRef = ref(database, 'Approved_Classes')
 
-rooms.forEach((room) => {
-    document.querySelector('.classes').innerHTML += `
-    <div class="class">
-        <i class="fa-solid fa-${room.icon}"></i>
-        <h1 class="class-name">${room.subjectName}</h1>
-        <p class="teacher-name">By Mr.<strong>${room.teacherName}</strong></p>
-        <p class="teacher">Teacher</p>
-    </div>
-     `;
- });
+get(classesRef)
+  .then((snapshot)=>{
+    if(snapshot.exists()) {
+      const classes = snapshot.val();
+
+      console.log(classes)
+
+
+      Object.keys(classes).forEach((array)=>{
+        console.log(classes[array])
+
+        if(classes[array].TeacherName === localStorage.getItem('userData')){
+          document.querySelector('.classes').innerHTML += `
+          <div class="class">
+              <i class="fa-solid fa-${classes[array].Icon}"></i>
+              <h1 class="class-name">${classes[array].ClassName}</h1>
+              <p class="teacher-name">By Mr.<strong>${classes[array].TeacherName}</strong></p>
+              <p class="teacher">Teacher</p>
+          </div>
+           `;
+        }
+
+      });
+
+    }
+  })
+
+
+
  
  // Access all classrooms and log their data-securityCode
  const classrooms = document.querySelectorAll('.classes');
@@ -130,13 +150,14 @@ button.addEventListener('click', () => {
 
     const iconName = document.querySelector('.icon-name').value;
     const className = document.querySelector('.name-of-class').value;
-
+    const teacherName = localStorage.getItem('userData');
 
 
 	const userData = {
 		Icon: iconName,
 		ClassName: className,
-		status: 'underReview'
+		status: 'underReview',
+    TeacherName: teacherName
 	};
 
 
@@ -148,7 +169,30 @@ button.addEventListener('click', () => {
 
 	set(userRef, userData)
 		.then (()=>{
-            window.location.reload();
+           showToastClassApproved();
+           setTimeout(()=>{window.location.reload();}, 6000)
         });
 
 });
+
+
+
+
+let toastBox = document.getElementById('toastBox');
+
+function showToastClassApproved() {
+
+  let toast = document.createElement('div');
+  toast.classList.add('toast');
+  toast.innerHTML = '<i class="fa-solid fa-circle-check"></i> Your class is under review and may take up to 24 hours. Please check your email.';
+  toast.innerHTML += ''
+  toastBox.appendChild(toast);
+
+  setTimeout(()=>{
+    toast.remove();
+  }, 6000)
+};
+
+
+
+

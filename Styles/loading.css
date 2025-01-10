@@ -1,0 +1,41 @@
+
+.for-teachers{
+    display: block;
+    margin-bottom: 30px;
+}
+.for-teachers h4, .for-teachers i{
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.for-teachers i{
+    margin-right: 10px;
+    left: 21%;
+    margin-top: 8px;
+}
+.for-teachers h4{
+    left: 3%;
+}
+.for-teachers h4:hover, .for-teachers i:hover{
+    color: #4CC9FE;
+}
+body{
+    background-color: #343f4f;
+}
+.parent-container {
+    display: flex;               /* Use Flexbox */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */
+    width: 100vw;                /* Full viewport width */
+    height: 100vh;               /* Full viewport height */
+    position: relative;
+}
+
+.full-width {
+    width: 30%;                  /* Adjust width to your preference */
+    height: auto;                /* Maintain aspect ratio */
+    max-width: 100%;             /* Prevent overflowing */
+    display: block;              /* Ensures proper behavior */
+}

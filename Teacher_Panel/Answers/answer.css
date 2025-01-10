@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling for general website */
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.home {
+    position: relative;
+    padding-top: 104px;
+  }

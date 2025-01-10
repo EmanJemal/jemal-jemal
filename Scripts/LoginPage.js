@@ -51,6 +51,7 @@ loginForm.addEventListener('submit', (e) => {
                     userArray.push(childSnapshot.val());
                     if(name === childSnapshot.val().name && password === childSnapshot.val().password){
                         window.location.href="../HTML/classrooms.html"
+                        localStorage.setItem('userData', name)
                     }
                 });
     

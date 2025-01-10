@@ -19,13 +19,11 @@ body {
     grid-template-columns: 50% 50%;
 }
 .message .student-list, .message .message-list{
-    height: 200vh;
     border-radius: 20px;
     margin-bottom: 30px;
     border-style: solid;
     border-color: rgb(0, 0, 0);
     border-width: 1px;
-    padding: 20px;
     position: relative;
 }
 .message-list{
@@ -48,6 +46,7 @@ body {
     border-style: solid;
     display: inline-block;
     margin-bottom: 30px;
+    margin-left: 30px;
 }
 .hameburger-menu-close{
   display: none;
@@ -63,42 +62,221 @@ body {
     scale: 1.1;
 }
 
-/*Student List order*/
-.student-list-order{
+/*Student List order*/.student-list-order {
     display: grid;
-    grid-template-rows: repeat(10, 30%);
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); /* Dynamic row sizing */
+    gap: 20px; /* Add consistent spacing between rows */
+    padding: 10px; /* Add padding around the container */
 }
-.student-list-order .student{
-    border-width: 1px;
-    margin-bottom: 20px;
-    padding: 10px;
+
+.student-list-order .student {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Define a clear border color */
+    margin-bottom: 0; /* Remove extra margin to avoid layout inconsistencies */
+    padding: 15px; /* Increase padding for better readability */
     border-radius: 10px;
-    transition: background-color ease-in-out 100ms;
-    transition: color ease-in-out 100ms;
+    background-color: #fff; /* Ensure a visible background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+    transition: background-color ease-in-out 200ms, color ease-in-out 200ms;
     cursor: pointer;
+    color: rgb(63, 63, 63);
 }
-.student h4, .student p{
+
+.student h4, .student p {
     display: inline-block;
     margin-left: 10px;
+    vertical-align: middle; /* Ensure proper alignment */
+    margin-top: 0; /* Prevent extra spacing */
+    margin-bottom: 0; /* Prevent extra spacing */
 }
-.student-list-order .student:hover{
-    background-color: rgb(63, 63, 63);
-    color: rgb(243, 243, 243);
-}
-.active-student{
+
+.student-list-order .student:hover {
     background-color: rgb(63, 63, 63);
     color: rgb(243, 243, 243);
 }
 
-/*message list*/
-.message-list{
+.active-student {
+    background-color: rgb(63, 63, 63);
+    color: rgb(243, 243, 243);
+}
+
+/* Add responsive adjustments for better scaling */
+@media (max-width: 768px) {
+    .student-list-order {
+        grid-template-rows: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust row height for smaller screens */
+    }
+    .student {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+/* General layout for message-list */
+.message-list {
     display: grid;
-    grid-template-rows: 20% 60% 40%;
+    grid-template-rows: 15% 70% 15%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    height: 100%;
+    max-height: 500px;
 }
-.message-list h1, .message-list .class {
-    display: inline-block;
+
+/* Header styles */
+.header-msg-list {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
 }
-.message-list .last-seen{
-    font-weight: 806;
-    margin-left: 30px;
+
+.header-msg-list .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 10px;
 }
+
+.message-list h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.message-list .class {
+    margin-left: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.message-list .last-seen {
+    margin-left: auto;
+    color: #999;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* Body styles */
+.body {
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+/* Send section */
+.send {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.message-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.send-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.send-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* General message list styling */
+.message-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .header-msg-list{
+    padding: 15px;
+  }
+
+  /* Message body styling */
+  .body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Sent and received messages */
+  .message {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .message.sent {
+    align-self: flex-end;
+    background-color: #d1f4d1;
+  }
+  
+  .message.received {
+    align-self: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+  }
+  
+  .message .timestamp {
+    display: block;
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 5px;
+    text-align: right;
+  }
+  
+  /* Input section styling */
+  .send {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #ffffff;
+    border-top: 1px solid #ccc;
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1em;
+  }
+  
+  .send-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .send-btn:hover {
+    background-color: #0056b3;
+  }
+  
