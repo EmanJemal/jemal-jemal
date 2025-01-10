@@ -1,4 +1,4 @@
-function checkWidth() {
+/*function checkWidth() {
     if (window.innerWidth < 960) {
         // Update icon to make it more mobile-friendly
         responsiveIcon();
@@ -27,3 +27,4 @@ window.addEventListener('resize', checkWidth);
 
 // Initial check
 checkWidth();
+*/
