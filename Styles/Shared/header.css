@@ -1,18 +1,19 @@
-/*General*/
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Poppin;
+  font-family: "Poppins", sans-serif;
 }
+
 body {
-  align-items: center;
+  display: flex;
   justify-content: center;
   min-height: 100vh;
   background: #343f4f;
 }
 
-.links {
+ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +37,6 @@ header {
   width: 100px;
   height: 50px;
   margin-left: 50px;
-  margin-top: -50px;
 }
 
 .links {
@@ -98,7 +98,6 @@ header {
 @media (max-width: 935px) {
   .svg-logo {
     width: 150px;
-    margin-left: 0;
   }
 
   header {
@@ -136,7 +135,6 @@ header {
 
   .links a {
     margin-bottom: 10px;
-    margin-top: 10px;
   }
 
   .logo {
@@ -145,7 +143,7 @@ header {
   }
 
   .svg-logo {
-    width: 400px;
+    width: 200px;
   }
 }
 
