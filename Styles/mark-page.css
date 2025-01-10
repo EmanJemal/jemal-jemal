@@ -14,7 +14,7 @@
     color: white;
     font-size: 20px;
     margin-left: 50px;
-    margin-top: 30px;
+    margin-top: 60px;
     width: fit-content;
 }
 .classRoomName{
@@ -22,6 +22,7 @@
     font-size: 50px;
     text-align: start;
     margin-left: 50px;
+    width: 300px;
 }
 .classDetail i{
     color: #4CC9FE;
