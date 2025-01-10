@@ -156,7 +156,7 @@
 .homework-detail-it{
     margin-left: 50px;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 15px;
 
     margin-top: 20px;
     margin-left: 100px;
@@ -185,7 +185,6 @@
 .wrapper{
   width: 80%;
   border-radius: 5px;
-  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
   margin-top: -40px;
 }
 .wrapper h1{
@@ -291,12 +290,26 @@ section .details span{
     margin-top: 100px;
   }
 }
+@media(max-width: 800px){
+  .wrapper{
+    margin-top: 30px;
+  }
+}
 @media(max-width: 546px){
   .classroom-links {
     margin-top: 30px;
   }
   .classroom-links li a{
     font-size: 13px;
+  }
+  .alert-mssg-for-homework h3,
+  .classDetail, .alert-mssg-for-homework h3, .homework-detail-it li 
+  , .homework-detail-it
+  {
+    margin-left: 20px;
+  }
+  .classDetail, .container-alert{
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 450px) {

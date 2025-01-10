@@ -48,7 +48,7 @@ async function fetchTasks(className) {
     `;
 
     const pointsList = document.getElementById('homeworkPoints');
-    pointsList.innerHTML = `<ul><i class="fa-solid fa-check"></i> ${latestTask.points} Points</ul>`;
+    pointsList.innerHTML = `<ul><i class="fa-solid fa-check"></i> ${latestTask.points}</ul>`;
 
     if (latestTask.date) {
       startCountdown(new Date(latestTask.date).getTime());
