@@ -36,6 +36,7 @@ header {
   width: 100px;
   height: 50px;
   margin-left: 50px;
+  margin-top: -50px;
 }
 
 .links {
@@ -97,6 +98,7 @@ header {
 @media (max-width: 935px) {
   .svg-logo {
     width: 150px;
+    margin-left: 0;
   }
 
   header {
@@ -134,6 +136,7 @@ header {
 
   .links a {
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .logo {
@@ -142,7 +145,7 @@ header {
   }
 
   .svg-logo {
-    width: 200px;
+    width: 400px;
   }
 }
 
