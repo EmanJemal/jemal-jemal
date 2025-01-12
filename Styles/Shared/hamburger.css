@@ -1,0 +1,107 @@
+/* Base Styling */
+.hamburger-search-input {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .nav-open-btn {
+    background-color: #343f4f; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40px;
+    width: 70px;
+    position: relative;
+  }
+  
+  .nav-open-btn .line {
+    display: block;
+    height: 3px;
+    background-color: white; /* Line color */
+    border-radius: 2px;
+    width: 100%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Add animation to lines when clicked (optional toggle effect) */
+  .nav-open-btn:active .line-1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-open-btn:active .line-2 {
+    opacity: 0;
+  }
+  
+  .nav-open-btn:active .line-3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Dropdown Styling */
+  .hamburger-menu-close {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 90%;
+    z-index: 1;
+    width: 100vh; /* Adjust dropdown width */
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  .hamburger-menu-close a{
+    margin-right: 40px;
+  }
+  .hamburger-menu-close .grade {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .hamburger-menu-close .grade:last-child {
+    border-bottom: none;
+  }
+  
+  .hamburger-menu-close .grade:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  /* Show dropdown with animation on hover */
+  .hamburger-search-input:hover .hamburger-menu-close {
+    display: block;
+    animation: slideDown 0.3s ease-in-out forwards;
+  }
+  
+  /* Dropdown Animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+@media(max-width: 606px){}

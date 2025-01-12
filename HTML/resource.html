@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../Styles/Shared/alert-box.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="../Styles/Shared/hamburger.css">
+    <link rel="stylesheet" href="../Styles/resource.css">
 </head>
 <body>
 
@@ -100,8 +101,8 @@
   <div class="hamburger-menu-close">    
 
     <a href="../HTML/classrooms.html" class="classroom-link">Home Work</a>
-    <a href="" class="classroom-assignment" style="border-color: #4CC9FE;color: #4CC9FE;">Mark</a>
-    <a href="../HTML/resource.html" class="classroom-rooms">Resource</a>
+    <a href="../HTML/mark-page.html" class="classroom-assignment" >Mark</a>
+    <a href="../HTML/createdRooms.html" class="classroom-rooms" style="border-color: #4CC9FE;color: #4CC9FE;">Resource</a>
     <a href="../HTML/setting.html" class="classroom-setting">Group Page</a>
     <a href="../HTML/teacher-inbox.html" class="classroom-profile">Teacher Inbox</a>
 
@@ -113,61 +114,16 @@
 
 
 
-  <div class="for-teachers">
-  </div>
+<div class="for-teachers">
+</div>
 
 
 
 
-<!-- Homework Details Page -->
 <div class="container">
-  <div class="classDetail">
-    <div class="class-name-plus-start">
-      <div class="classNamePlusTeacherName">
-        <h1 class="classRoomName" id="classRoomName"></h1>
-        <h4 class="teacherName" id="teacher-name"></h4>
-      </div>
-      <i class="fa-solid fa-star fa-start"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
 
-  <div class="alert-mssg-for-homework">
-
-    <section class="container-alert">
-      <div class="time-content" id="deadlineTimer">
-        <!-- Countdown Timer Here -->
-      </div>
-    </section>
-
-    <h3 class="alert-mssg">Home Work:</h3>
-  </div>
-
-  <div class="homework-detail-it">
-    <div class="homework-description">
-      <h3 class="homework-title" id="homeworkTitle">No Homework Assigned Yet</h3>
-      <ul id="homeworkPoints">
-        <!-- Homework Points -->
-      </ul>
-    </div>
-    <div class="homework-upload">
-      
-      <div class="wrapper">
-        
-        <section class="uploaded-area"></section>
-
-        <h1 class="upload-h1">Upload Homework</h1>
-        <form id="uploadForm">
-          <input class="file-input" type="file" name="file" hidden multiple >
-          <i class="fas fa-cloud-upload-alt"></i>
-          <p>Browse File to Upload</p>
-        </form>
-        <section class="progress-area"></section>
-      </div>
-    </div>
-  </div>
+    <h1>YouTube Links</h1>
+    <div id="videoList" class="video-list"></div>
   
 </div>
   
@@ -226,32 +182,12 @@
         </div>
       </div>
 
-
-
-
-      <div class="container-alert">
-        <input type="checkbox" id="check">
-        <div class="background"></div>
-  
-        <div class="alert_box">
-          <div class="icon">
-            <i class="fas fa-exclamation"></i>
-          </div>
-          <header>Alert</header>
-          <p>Prepare for the upcoming Math Test</p>
-          <div class="btns">
-            <label for="check">Ok</label>
-          </div>
-        </div>
-      </div>
-
-
     
       <!-- Linking Emoji Mart script for emoji picker -->
       <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
       <script src="../Scripts/Shared/chatBot.js"></script>
       <script type="module" src="../Scripts/Shared/alert-box.js"></script>
-    <script type="module" src="../Scripts/Shared/header.js"></script>
-    <script type="module" src="../Scripts/mark-page.js"></script>
+      <script type="module" src="../Scripts/resource.js"></script>
+      <script type="module" src="../Scripts/Shared/header.js"></script>
 </body>
 </html>

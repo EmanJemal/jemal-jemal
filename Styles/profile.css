@@ -1,80 +1,120 @@
-h1, h3, h2, i{
-    color: white;
-}
-.container .profile{
-    display: grid;
-    grid-template-columns: 150px 1fr;
+.profile-picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     margin-left: 50px;
-}
-.container .profile i{
-    font-size: 150px;
-    margin-top: 40px;
-}
-.container .profile h1{
     margin-top: 50px;
-    font-size: 50px;
 }
-.student{
-    color: rgb(226, 226, 226);
-}
-
-.container{
+.header{
+    position: relative;
     display: grid;
-    grid-template-rows: 300px;
+    grid-template-columns: 30% 50%;
+    margin-left: 10%;
 }
-.profile{
-    padding: 20px;
-    width: 80%;
-    border-radius: 20px;
-    box-shadow: 2px 2px 10px black;
-    transition: box-shadow 500ms ease-in-out;
+.image-notes{
+    position: relative;
+}
+.image-notes .fa-pen-fancy{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 57%;
     cursor: pointer;
-  }
-.profile:hover{
-    box-shadow: 3px 3px 20px black;
 }
-@media(max-width: 866px) {
-    .container .profile h1{
-        font-size: 30px;
-    }
-    .container .profile h3{
-        font-size: 20px;
-    }
+.image-notes .fa-pen-fancy:hover{
+    color: #4CC9FE;
 }
-@media(max-width: 774px) {
-    .container .profile i{
-        font-size: 100px;
-        margin-top: 50px;
-        margin-left: 20px;
-    }
+.Insight{
+    width: 100px;
+    position: absolute;
+    top: 80%;
+
+    height: 30px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #4CC9FE;
+    border-width: 2px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    background-color: #343f4f;
 }
-@media(max-width: 620px) { 
-    .container .profile{
-        grid-template-columns:  1fr;
-    }   
-    .container .profile i{
-        margin-top: 0;
-        width: 100%;
-        text-align: center;
-    }
-    .container .profile h1{
-        width: 100%;
-        text-align: center;
-        margin-top: 0;
-    }
-    .container .profile h3{
-        width: 100%;
-        text-align: center;
-        margin-top: 0;
-    }
+.Insight::placeholder{
+    color: white;
+    font-weight: bold;
 }
-@media (max-width: 530px) {
-    .profile{
-        margin-top: 30px;
-    }
+/*Other Profile Details*/
+.user-name{
+    color: white;
+    margin-left: 80px;
+    font-size: 25px;
 }
-@media(max-width: 420px) {
-    .profile{
-        width: 80%;
-    }
+.user-role{
+    color: rgb(218, 218, 218);
+    margin-left: 80px;
+    font-size: 15px;
+}
+.edit-profile{
+    color: white;
+    margin-left: 40%;
+    margin-top: 25px;
+    background-color: #4CC9FE;
+    border: NONE;
+    padding: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 150px;    
+    cursor: pointer;
+    border-width: 2px;
+}
+.edit-profile:hover{
+    color: #4CC9FE;
+    background-color: #343f4f;
+    border-color: #4CC9FE;
+    border-style: solid;
+}
+.log-out{
+    color: white;
+    margin-top: 25px;
+    margin-left: 10px;
+    background-color: #ff3014;
+    border: NONE;
+    padding: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 150px;    
+    cursor: pointer;
+    border-width: 2px;
+    margin-bottom: 30px;
+}
+.log-out:hover{
+    color: #ff3014;
+    background-color: #343f4f;
+    border-color: #ff3014;
+    border-style: solid;
+}
+.other-profile-details button i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.status{
+    margin-left: 80px;
+}
+.status p, .status h3{
+    display: inline-block;
+    color: white;
+    margin-top: 20px;
+}
+.status p{
+    margin-right: 50px;
+}
+.classroom{
+    margin-top: 60px;
+}
+.line-bn-container-classes{
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin-top: 50px;
 }

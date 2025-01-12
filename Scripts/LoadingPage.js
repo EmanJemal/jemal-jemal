@@ -1,25 +1,7 @@
 import { database, get, set, push, ref,  auth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from './firebase.js';
-// 8
-// Show Loading Animation
-function showLoadingPage() {
-  document.body.innerHTML = `
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <div class="parent-container">
-      <dotlottie-player 
-        class="full-width"
-        src="https://lottie.host/ca4215fb-31aa-471f-9708-ae245d4f4dc4/Bu346LATDK.json" 
-        background="transparent" 
-        speed="1"
-        loop autoplay>
-      </dotlottie-player>
-    </div>
-  `;
-}
 
 
 
-// Fetch Data from Firebase
-showLoadingPage(); // Display loading animation first
 
 const userRef = ref(database, 'users')
 get(userRef)
@@ -42,14 +24,14 @@ get(userRef)
           } 
           else if (users[user].role === "teachers") {
             console.log('Teacher logged in');
+            document.querySelector('.for-teachers').innerHTML = `  <a href="../Teacher_Panel/Teacher-Dashboard/teacher-dashboard.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-person-chalkboard"></i><h4>Turn into teachers Page</h4></a>`
             break;
           }
         }
       }
 
       if (validUser) {
-        // Load main HTML content if the user is valid
-        loadMainPage();
+
       } else {
         console.warn('No valid user found, redirecting to login...');
         window.location.href = "../HTML/LoginPage.html";

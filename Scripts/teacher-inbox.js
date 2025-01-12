@@ -130,3 +130,9 @@ import {
     fetchTeacherDetails();
   });
   
+
+
+  window.addEventListener("load", function () {
+    const chatBody = document.getElementById("chat-body");
+    chatBody.scrollTop = chatBody.scrollHeight;
+});

@@ -49,7 +49,7 @@ header {
   margin: 0 20px;
 }
 
-.links a {
+.links a, .hamburger-menu-close a {
   padding-bottom: 5px;
   margin-bottom: 10px;
   border-bottom: 3px solid transparent;
@@ -57,7 +57,7 @@ header {
   cursor: pointer;
 }
 
-.links a::after {
+.links a::after, .hamburger-menu-close a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -68,11 +68,11 @@ header {
   transition: width 0.3s ease;
 }
 
-.links a:hover::after {
+.links a:hover::after, .hamburger-menu-close a:hover::after {
   width: 100%;
 }
 
-.links a:hover {
+.links a:hover, .hamburger-menu-close a:hover {
   color: #4CC9FE;
 }
 
@@ -95,7 +95,32 @@ header {
 .button-premium button:hover {
   color: #4CC9FE;
 }
-
+/*Search bar for the student list*/
+.search-for-u-user{
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 90%;
+  color: black;
+  border-style: solid;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+.hameburger-menu-close{
+display: none;
+}
+.hameburger-menu-open{
+display: inline-block;
+}
+.grade{
+  cursor: pointer;
+  transition: scale ease-in-out 20ms;
+}
+.grade:hover{
+  scale: 1.1;
+}
 /* Responsive Styles */
 @media (max-width: 935px) {
   .svg-logo {

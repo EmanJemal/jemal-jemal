@@ -11,12 +11,13 @@
     cursor: pointer;
 }
 .for-teachers i{
-    margin-right: 10px;
-    left: 21%;
+    margin-right: 30px;
+    left: 2%;
     margin-top: 8px;
+    font-size: 30px;
 }
 .for-teachers h4{
-    left: 3%;
+    left: 7%;
 }
 .for-teachers h4:hover, .for-teachers i:hover{
     color: #4CC9FE;

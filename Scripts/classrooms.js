@@ -1,4 +1,3 @@
-import { rooms } from './Data/rooms.js';
 import { database, ref, set, get, update, remove, onValue, child, push, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from '../Scripts/firebase.js';
 
 const approvedRoomsRef = ref(database, 'Approved_Classes');
@@ -9,13 +8,16 @@ get(approvedRoomsRef)
       const rooms = snapshot.val();
       const classroomContainer = document.querySelector('.classrooms');
       let classFound = false; // Track if any class is found
+      classroomContainer.innerHTML = ``
 
       Object.keys(rooms).forEach(roomKey => {
         const room = rooms[roomKey];
 
+
         if (room.students) {
           Object.keys(room.students).forEach(studentKey => {
             if (room.students[studentKey] === localStorage.getItem('userData')) {
+             
               classFound = true; // Class found for the user
               classroomContainer.innerHTML += `
                 <div class="classroom" data-room-key="${roomKey}">
