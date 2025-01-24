@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penta Class</title>
+    <link rel="stylesheet" href="./Styles/Shared/scrollbar.css">
     <style>
         body{
             background-color: #343f4f;
@@ -24,7 +25,9 @@
             max-width: 100%;             /* Prevent overflowing */
             display: block;              /* Ensures proper behavior */
         }
-
+        body{
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -33,9 +36,9 @@
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
 
     <div class="parent-container">
-    <dotlottie-player class="full-width"src="https://lottie.host/ca4215fb-31aa-471f-9708-ae245d4f4dc4/Bu346LATDK.json" background="transparent" speed="1"loop autoplay></dotlottie-player>
+        <dotlottie-player class="full-width"src="https://lottie.host/ca4215fb-31aa-471f-9708-ae245d4f4dc4/Bu346LATDK.json" background="transparent" speed="1"loop autoplay></dotlottie-player>
     </div>
 
-    <script src="index.js"></script>
+    <script type="module" src="./Scripts/Shared/redirect.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@
   
   .video-item {
     display: grid;
-    grid-template-rows: 20% 70%;
+    grid-template-rows: 20% 70% 10%;
     margin-top: 50px;
 
     border-style: solid;
@@ -28,7 +28,9 @@
     border-radius: 5px;
 
     box-shadow: 3px 3px 20px black;
+    transition: transform 500ms ease-in-out;
     transition: box-shadow 500ms ease-in-out;
+    cursor: pointer;
   }
   .video-item:hover{
     box-shadow: 5px 5px 50px black;
@@ -40,12 +42,15 @@
   }
   
   .thumbnail {
-    width: 70%;
-    height: auto;
-    margin-top: 20px;
-    margin-left: 80px;
-    object-fit: cover;  
+    width: 80%; /* Ensure it fills the width of its container */
+    height: 260px; /* Set a fixed height */
+    margin: 0; /* Remove unnecessary margins */
+    object-fit: cover; /* Cover the container without black margins */
+    display: block; /* Prevent inline spacing issues */
+    border-radius: 5px; /* Optional: Round the edges for aesthetics */
+    margin: 30px 60px;
   }
+  
   
   .video-details {
     padding: 10px;
@@ -63,3 +68,59 @@
     font-size: 14px;
     color: white;
   }
+  .file-item {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    margin-top: 50px;
+
+    position: relative;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4CC9FE;
+    border-radius: 5px;
+
+    box-shadow: 3px 3px 20px black;
+    transition: transform 500ms ease-in-out;
+    transition: box-shadow 500ms ease-in-out;
+    cursor: pointer;
+  }
+
+.file-details{
+  color: white;
+  margin-top: 80px;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+
+}
+.file-item:hover{
+  box-shadow: 5px 5px 50px black;
+}
+
+
+.file-item:hover {
+  transform: scale(1.02);
+}
+.file-details h3, .file-details a{
+  margin-left: 15px;
+}
+.icon-fa i{
+  color: white;
+  font-size: 70px;
+  margin-top: 30px;
+  position: absolute;
+  left: 40%;
+}
+.file-details a:hover{
+  color: #4CC9FE;
+}
+.fa-thumbs-up{
+  font-size: 24px;
+  color: #4CC9FE;
+  margin-top: 2px;
+}
+.like-count{
+  display: inline-block;
+  margin-left: 5px;
+  color: white;
+}
