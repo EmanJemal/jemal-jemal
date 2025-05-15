@@ -63,6 +63,9 @@ function loadMessages(studentName) {
         messageElem.appendChild(messageTimestamp);
         messageBody.appendChild(messageElem);
       });
+
+      messageBody.scrollTop = messageBody.scrollHeight;
+
     } else {
       messageBody.innerHTML = `<p class="no-messages-placeholder">No messages yet.</p>`;
     }
@@ -158,6 +161,8 @@ function sendMessage() {
   });
 
   messageInput.value = ""; // Clear the input field
+  messageBody.scrollTop = messageBody.scrollHeight;
+
 }
 
 // Event listener for send button

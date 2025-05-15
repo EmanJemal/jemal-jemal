@@ -12,6 +12,7 @@ const youtubeLinks = [
 
 const links = [
   "https://www.youtube.com/watch?v=W6NZfCO5SIk",
+  "https://www.youtube.com/watch?v=xf0Mli0LVgI",
   "https://www.exam-mate.com/media/pastpapers/452317/0417_s24_qp_22.pdf" // PDF link
 ];
 

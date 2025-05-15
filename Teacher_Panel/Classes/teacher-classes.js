@@ -1,4 +1,3 @@
-import { rooms } from "../../Scripts/Data/rooms.js";
 import { database, ref, set, get, update, remove, onValue, child, push, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from '../../Scripts/firebase.js';
 
 const classesRef = ref(database, 'Approved_Classes')
